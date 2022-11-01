@@ -110,6 +110,88 @@ const NEMESIS_BOSSES = new Set([
 	'Zushuka',
 ]);
 
+// The subset of Nemesis bosses that spawn randomly and thus require
+// boss checks, or that are exceptionally rare (e.g. Ferumbras, Devovorga).
+// Bosses that have a 2-week cooldown or Dream Courts mini-bosses are
+// excluded from this list.
+const HARD_NEMESIS_BOSSES = new Set([
+	'Arachir the Ancient One',
+	'Arthom The Hunter',
+	'Barbaria',
+	'Battlemaster Zunzu',
+	'Big Boss Trolliver',
+	'Burster',
+	'Captain Jones',
+	'Countess Sorrow',
+	'Devovorga',
+	'Dharalion',
+	'Diblis the Fair',
+	'Dracola',
+	'Dreadful Disruptor',
+	'Dreadmaw',
+	'Elvira Hammerthrust',
+	'Ferumbras',
+	'Flamecaller Zazrak',
+	'Fleabringer',
+	'Foreman Kneebiter',
+	'Furyosa',
+	'General Murius',
+	'Ghazbaran',
+	'Grand Mother Foulscale',
+	'Grandfather Tridian',
+	'Gravelord Oshuran',
+	'Groam',
+	'Grorlam',
+	'Hairman the Huge',
+	'Hatebreeder',
+	'High Templar Cobrass',
+	'Hirintror',
+	'Horestis',
+	'Jesse the Wicked',
+	'Mahatheb',
+	'Man in the Cave',
+	'Massacre',
+	'Morgaroth',
+	'Mornenion',
+	'Morshabaal',
+	'Mr. Punish',
+	'Ocyakao',
+	'Omrafir',
+	'Oodok Witchmaster',
+	'Orshabaal',
+	'Robby the Reckless',
+	'Rotworm Queen',
+	'Rukor Zad',
+	'Shlorg',
+	'Sir Valorcrest',
+	'Smuggler Baron Silvertoe',
+	'The Abomination',
+	'The Big Bad One',
+	'The Evil Eye',
+	'The Frog Prince',
+	'The Handmaiden',
+	'The Hungerer',
+	'The Imperor',
+	'The Manhunter',
+	'The Mean Masher',
+	'The Old Whopper',
+	'The Pale Count',
+	'The Plasmother',
+	'The Voice Of Ruin',
+	'The Welter',
+	'Tyrn',
+	'Tzumrah The Dazzler',
+	'Warlord Ruzad',
+	'White Pale',
+	'Willi Wasp',
+	'Xenia',
+	'Yaga the Crone',
+	'Yakchal',
+	'Zarabustor',
+	'Zevelon Duskbringer',
+	'Zushuka',
+]);
+
 const ARCHFOE_BOSSES = new Set([
 	'Abyssador',
 	'Amenef the Burning',
@@ -290,12 +372,16 @@ const BOSSES = new Set([
 ]);
 
 const GLOBAL_TOTAL_NEMESIS_BOSS_KILLS = new Map();
+const GLOBAL_TOTAL_HARD_NEMESIS_BOSS_KILLS = new Map();
 const GLOBAL_TOTAL_ARCHFOE_BOSS_KILLS = new Map();
 const GLOBAL_TOTAL_BANE_BOSS_KILLS = new Map();
 const GLOBAL_TOTAL_BOSS_KILLS = new Map();
 for (const [race, kills] of GLOBAL_TOTAL_KILLS) {
 	if (NEMESIS_BOSSES.has(race)) {
 		GLOBAL_TOTAL_NEMESIS_BOSS_KILLS.set(race, kills);
+	}
+	if (HARD_NEMESIS_BOSSES.has(race)) {
+		GLOBAL_TOTAL_HARD_NEMESIS_BOSS_KILLS.set(race, kills);
 	}
 	if (ARCHFOE_BOSSES.has(race)) {
 		GLOBAL_TOTAL_ARCHFOE_BOSS_KILLS.set(race, kills);
@@ -324,6 +410,7 @@ const writeMap = async (map, slug) => {
 };
 
 await writeMap(GLOBAL_TOTAL_NEMESIS_BOSS_KILLS, 'nemesis-boss');
+await writeMap(GLOBAL_TOTAL_HARD_NEMESIS_BOSS_KILLS, 'hard-nemesis-boss');
 await writeMap(GLOBAL_TOTAL_ARCHFOE_BOSS_KILLS, 'archfoe-boss');
 await writeMap(GLOBAL_TOTAL_BANE_BOSS_KILLS, 'bane-boss');
 await writeMap(GLOBAL_TOTAL_BOSS_KILLS, 'boss');
