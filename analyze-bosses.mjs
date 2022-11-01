@@ -112,7 +112,8 @@ const NEMESIS_BOSSES = new Set([
 
 // The subset of Nemesis bosses that spawn randomly and thus require
 // boss checks, or that are exceptionally rare (e.g. Ferumbras, Devovorga).
-// Bosses that have a 2-week cooldown or Dream Courts mini-bosses are
+// Bosses that have a 2-week cooldown, Dream Courts mini-bosses, and most
+// bosses that can be predictably found during an announced raid are
 // excluded from this list.
 const HARD_NEMESIS_BOSSES = new Set([
 	'Arachir the Ancient One',
