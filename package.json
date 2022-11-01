@@ -3,7 +3,7 @@
 	"scripts": {
 		"build": "npm run fetch && npm run analyze",
 		"fetch": "node --no-warnings get-stats.mjs",
-		"analyze": "node analyze-global-total-kills.mjs"
+		"analyze": "node analyze-global-total-kills.mjs && node analyze-bosses.mjs"
 	},
 	"devDependencies": {
 		"glob": "^8.0.3",

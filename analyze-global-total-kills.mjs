@@ -18,7 +18,9 @@ const handleFile = async (fileName) => {
 	}
 };
 
-const fileNames = glob.sync('./data/*/*.json');
+const fileNames = glob.sync('./data/*/*.json', {
+	ignore: './data/_global-total/*.json',
+});
 for (const fileName of fileNames) {
 	await handleFile(fileName);
 }
@@ -35,11 +37,11 @@ const json = jsesc(Object.fromEntries(sorted), {
 	json: true,
 	compact: false,
 });
-await fs.writeFile('./data/global-total-kills.json', `${json}\n`);
+await fs.writeFile('./data/_global-total/kills.json', `${json}\n`);
 
 const code = `export const GLOBAL_TOTAL_KILLS = ${
 	jsesc(new Map(sorted), {
 		compact: false,
 	})
 };`;
-await fs.writeFile('./data/global-total-kills.mjs', `${code}\n`);
+await fs.writeFile('./data/_global-total/kills.mjs', `${code}\n`);
