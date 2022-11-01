@@ -1,9 +1,12 @@
 {
 	"private": true,
 	"scripts": {
-		"build": "node --no-warnings get-stats.mjs"
+		"build": "npm run fetch && npm run analyze",
+		"fetch": "node --no-warnings get-stats.mjs",
+		"analyze": "node analyze-global-total-kills.mjs"
 	},
-	"dependencies": {
-		"glob": "^8.0.3"
+	"devDependencies": {
+		"glob": "^8.0.3",
+		"jsesc": "^3.0.2"
 	}
 }

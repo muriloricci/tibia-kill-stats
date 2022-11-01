@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import glob from 'glob';
+import jsesc from 'jsesc';
 
 // race => totalKilled
 const map = new Map();
@@ -24,8 +25,21 @@ for (const fileName of fileNames) {
 
 const entries = [...map.entries()];
 const sorted = entries.filter(entry => entry[1] > 0).sort((a, b) => {
+	if (a[1] === b[1]) {
+		return a[0].localeCompare(b[0]);
+	}
 	return a[1] - b[1];
 });
-for (const [race, kills] of sorted) {
-	console.log(`${race}\t${kills}`);
-}
+
+const json = jsesc(Object.fromEntries(sorted), {
+	json: true,
+	compact: false,
+});
+await fs.writeFile('./data/global-total-kills.json', `${json}\n`);
+
+const code = `export const GLOBAL_TOTAL_KILLS = ${
+	jsesc(new Map(sorted), {
+		compact: false,
+	})
+};`;
+await fs.writeFile('./data/global-total-kills.mjs', `${code}\n`);
