@@ -38,10 +38,3 @@ const json = jsesc(Object.fromEntries(sorted), {
 	compact: false,
 });
 await fs.writeFile('./data/_global-total/kills.json', `${json}\n`);
-
-const code = `export const GLOBAL_TOTAL_KILLS = ${
-	jsesc(new Map(sorted), {
-		compact: false,
-	})
-};`;
-await fs.writeFile('./data/_global-total/kills.mjs', `${code}\n`);
