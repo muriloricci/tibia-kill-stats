@@ -413,9 +413,31 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Dreadful Disruptor',
 	])],
 
-	// TODO: Bank robbery bosses
-	// TODO: Vampire lords
-	// TODO: Dream Courts
+	['bank-robbery-boss', new Set([
+		'Elvira Hammerthrust',
+		'Jesse the Wicked',
+		'Mornenion',
+		'Robby the Reckless',
+	])],
+
+	['vampire-lord-nemesis-boss', new Set([
+		// Note: Armenius is not a boss.
+		'Arachir the Ancient One',
+		'Diblis the Fair',
+		'Sir Valorcrest',
+		'The Pale Count',
+		'Zevelon Duskbringer',
+	])],
+
+	['dream-courts-nemesis-boss', new Set([
+		'Alptramun',
+		'Izcandar Champion of Summer',
+		'Izcandar Champion of Winter',
+		'Izcandar the Banished',
+		'Malofur Mangrinder',
+		'Maxxenius',
+		'Plagueroot',
+	])],
 
 	/* Other custom categories. */
 
