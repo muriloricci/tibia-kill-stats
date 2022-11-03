@@ -374,7 +374,6 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Tzumrah The Dazzler',
 		'Warlord Ruzad',
 		'White Pale',
-		'Willi Wasp',
 		'Xenia',
 		'Yaga the Crone',
 		'Yakchal',
