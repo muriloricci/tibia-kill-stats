@@ -243,9 +243,9 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Deep Terror',
 		'Dipthrah',
 		'Dirtbeard',
-		'Diseased Bill',
-		'Diseased Dan',
-		'Diseased Fred',
+		'Diseased Bills', // Tibia.com kill stats use the plural form. 🤷
+		'Diseased Dans', // Tibia.com kill stats use the plural form. 🤷
+		'Diseased Freds', // Tibia.com kill stats use the plural form. 🤷
 		'Doctor Perhaps',
 		'Enusat the Onyx Wing',
 		'Evil Mastermind',
@@ -438,19 +438,93 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Plagueroot',
 	])],
 
+	['oramond-voted-boss', new Set([
+		'Bullwark',
+		'Glooth Fairy',
+		'Lisa',
+	])],
+
+	['dark-trails-boss', new Set([
+		'Death Priest Shargon',
+		'The Ravager',
+	])],
+
+	['diseased-boss', new Set([
+		'Diseased Bills', // Tibia.com kill stats use the plural form. 🤷
+		'Diseased Dans', // Tibia.com kill stats use the plural form. 🤷
+		'Diseased Freds', // Tibia.com kill stats use the plural form. 🤷
+	])],
+
+	['ferumbras-ascension-boss', new Set([
+		'Mazoran',
+		'Plagirath',
+		'Ragiaz',
+		'Razzagorn',
+		'Shulgrax',
+		'Tarbaz',
+		'The Shatterer',
+		'Zamulosh',
+		// Final boss.
+		'Ferumbras Mortal Shell',
+	])],
+
+	['inquisition-boss', new Set([
+		'Annihilon',
+		'Golgordan',
+		'Hellgorak',
+		'Latrivan',
+		'Madareth',
+		'Ushuriel',
+		'Zugurosh',
+	])],
+
+	['heart-of-destruction-boss', new Set([
+		'Anomaly',
+		'Eradicator',
+		'Outburst',
+		'Realityquake',
+		'Rupture',
+		// Final boss.
+		'World Devourer',
+	])],
+
+	['kilmaresh-boss', new Set([
+		'Amenef the Burning',
+		'Bragrumol',
+		'Enusat the Onyx Wing',
+		'Mozradek',
+		'Neferi the Spy',
+		'Sister Hetai',
+		'Urmahlullu The Weakened',
+		'Xogixath',
+	])],
+
+	['soul-war-boss', new Set([
+		'Goshnar\'s Cruelty',
+		'Goshnar\'s Greed',
+		'Goshnar\'s Hatred',
+		'Goshnar\'s Malice',
+		'Goshnar\'s Spite',
+		// Final boss.
+		'Goshnar\'s Megalomania',
+	])],
+
+	['forgotten-knowledge-boss', new Set([
+		'Lady Tenebris',
+		'Lloyd',
+		'Melting Frozen Horror',
+		'Soul of Dragonking Zyrtarch',
+		'The Enraged Thorn Knight',
+		'The Time Guardian',
+		// Final boss.
+		'The Last Lore Keeper',
+	])],
+
 	/* Other custom categories. */
 
-	// TODO: Dark Trails bosses
-	// TODO: Diseased bosses
-	// TODO: Ferumbras Ascension mini + final bosses
-	// TODO: HoD mini + final bosses
 	// TODO: Blood Brothers bosses
-	// TODO: Inquisition bosses
-	// TODO: Kilmaresh bosses
 	// TODO: Pharaohs
 	// TODO: Secret library bosses
-	// TODO: Soul Wars mini + final bosses
-	// TODO: Thais / Forgotten Knowledge bosses
 	// TODO: Grave Danger bosses
 	// TODO: Cults bosses
 	// TODO: Vengoth mini + final bosses
