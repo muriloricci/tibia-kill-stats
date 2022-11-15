@@ -5,12 +5,22 @@ import {
 
 const CREATURES_PER_CATEGORY = new Map([
 
-	// TODO: Add Bestiary categories.
+	// Bestiary categories.
 	// https://tibia.fandom.com/wiki/Bestiary/Difficulties
 
-	// ['harmless-bestiary-creature', new Set([
-	// 	'TODO',
-	// ])],
+	['harmless-bestiary-creature', new Set([
+		'berrypests',
+		// The kill stats do not distinguish between blue, purple, or
+		// red butterflies.
+		'butterflies',
+		'cats',
+		'dogs',
+		'huskies',
+		'modified gnarlhounds',
+		'mushroom sniffers',
+		'northern pikes',
+		'pigeons',
+	])],
 
 	// ['trivial-bestiary-creature', new Set([
 	// 	'TODO',

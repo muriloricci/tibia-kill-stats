@@ -21,9 +21,25 @@ export const createKillsPerCategoryMap = (creaturesPerCategory) => {
 
 	for (const [race, kills] of GLOBAL_TOTAL_KILLS) {
 		for (const category of categories) {
-			if (creaturesPerCategory.get(category).has(race)) {
+			const creatures = creaturesPerCategory.get(category);
+			if (creatures.has(race)) {
 				GLOBAL_TOTAL_KILLS_PER_CATEGORY.get(category).set(race, kills);
 			}
+		}
+	}
+
+	for (const category of categories) {
+		const expectedCreatures = creaturesPerCategory.get(category);
+		const actualCreatures = new Set(
+			GLOBAL_TOTAL_KILLS_PER_CATEGORY.get(category).keys()
+		);
+		const expectedSize = expectedCreatures.size;
+		const actualSize = actualCreatures.size;
+		if (actualSize < expectedSize) {
+			const difference = new Set(
+				[...expectedCreatures].filter(creature => !actualCreatures.has(creature))
+			);
+			console.log(`Category ${category}: expected ${expectedSize} entries but got only ${actualSize}. Missing entries:`, difference);
 		}
 	}
 
