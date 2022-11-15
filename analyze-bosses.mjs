@@ -1,17 +1,7 @@
-import fs from 'node:fs/promises';
-import jsesc from 'jsesc';
-
-const readKillStats = async (filePath) => {
-	const json = await fs.readFile(filePath);
-	const object = JSON.parse(json);
-	const entries = Object.entries(object);
-	const map = new Map(entries);
-	return map;
-};
-
-const GLOBAL_TOTAL_KILLS = await readKillStats(
-	'./data/_global-total/kills.json'
-);
+import {
+	createKillsPerCategoryMap,
+	writeMap,
+} from './utils.mjs';
 
 const BOSSES_PER_CATEGORY = new Map([
 
@@ -543,28 +533,9 @@ BOSSES_PER_CATEGORY.set('boss', new Set([
 	...BOSSES_PER_CATEGORY.get('bane-boss'),
 ]));
 
-const GLOBAL_TOTAL_KILLS_PER_CATEGORY = new Map();
-const categories = [...BOSSES_PER_CATEGORY.keys()];
-for (const category of categories) {
-	GLOBAL_TOTAL_KILLS_PER_CATEGORY.set(category, new Map());
-}
 
-for (const [race, kills] of GLOBAL_TOTAL_KILLS) {
-	for (const category of categories) {
-		if (BOSSES_PER_CATEGORY.get(category).has(race)) {
-			GLOBAL_TOTAL_KILLS_PER_CATEGORY.get(category).set(race, kills);
-		}
-	}
-}
+const killsPerCategory = createKillsPerCategoryMap(BOSSES_PER_CATEGORY);
 
-const writeMap = async (map, slug) => {
-	const json = jsesc(Object.fromEntries(map), {
-		json: true,
-		compact: false,
-	});
-	await fs.writeFile(`./data/_global-total/${slug}-kills.json`, `${json}\n`);
-};
-
-for (const [slug, killsPerBoss] of GLOBAL_TOTAL_KILLS_PER_CATEGORY) {
-	await writeMap(killsPerBoss, slug);
+for (const [slug, killsPerBoss] of killsPerCategory) {
+	await writeMap(killsPerBoss, `bosses/${slug}`);
 }
