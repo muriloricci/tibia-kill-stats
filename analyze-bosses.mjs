@@ -533,7 +533,6 @@ BOSSES_PER_CATEGORY.set('boss', new Set([
 	...BOSSES_PER_CATEGORY.get('bane-boss'),
 ]));
 
-
 const killsPerCategory = createKillsPerCategoryMap(BOSSES_PER_CATEGORY);
 
 for (const [slug, killsPerBoss] of killsPerCategory) {
