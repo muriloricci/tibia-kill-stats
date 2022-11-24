@@ -318,7 +318,6 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Furyosa',
 		'General Murius',
 		'Ghazbaran',
-		'Grand Mother Foulscale',
 		'Grandfather Tridian',
 		'Gravelord Oshuran',
 		'Groam',
