@@ -117,6 +117,7 @@ const BOSSES_PER_CATEGORY = new Map([
 
 	['archfoe-boss', new Set([
 		'Abyssador',
+		'Ahau',
 		'Amenef the Burning',
 		'Ancient Spawn of Morgathla',
 		'Anomaly',
@@ -196,6 +197,7 @@ const BOSSES_PER_CATEGORY = new Map([
 		'The Flaming Orchid',
 		'The Lily of Night',
 		'The Mega Magmaoid',
+		'The Monster',
 		'The Moonlight Aster',
 		'The Nightmare Beast',
 		'The Pale Worm',
