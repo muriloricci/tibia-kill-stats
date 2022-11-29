@@ -473,7 +473,7 @@ const normalizedToPrettyNames = new Map([
 	['animated clomps', 'animated clomp'],
 	['animated cyclopes', 'animated cyclops'],
 	['animated feathers', 'animated feather'],
-	['animated guzzlemaws', 'animated guzzlema'],
+	['animated guzzlemaws', 'animated guzzlemaw'],
 	['animated moohtants', 'animated moohtant'],
 	['animated mummies', 'animated mummy'],
 	['animated ogre brutes', 'animated ogre brute'],
