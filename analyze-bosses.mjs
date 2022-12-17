@@ -511,6 +511,14 @@ const BOSSES_PER_CATEGORY = new Map([
 		'The Last Lore Keeper',
 	])],
 
+	['rookgaard-boss', new Set([
+		'Apprentice Sheng',
+		'Kraknaknork',
+		'Munster',
+		'Rottie the Rotworm',
+		'Teleskor',
+	])],
+
 	/* Other custom categories. */
 
 	['blood-brothers-boss', new Set([
