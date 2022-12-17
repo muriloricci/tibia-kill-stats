@@ -513,17 +513,118 @@ const BOSSES_PER_CATEGORY = new Map([
 
 	/* Other custom categories. */
 
-	// TODO: Blood Brothers bosses
-	// TODO: Pharaohs
-	// TODO: Secret library bosses
-	// TODO: Grave Danger bosses
-	// TODO: Cults bosses
-	// TODO: Vengoth mini + final bosses
-	// TODO: Port Hope flimsy bosses
-	// TODO: Falcon Bastion mini bosses + Oberon
-	// TODO: Cobra Bastion mini bosses + Scarlett
-	// TODO: Mini asura bosses
-	// TODO: True asura bosses
+	['blood-brothers-boss', new Set([
+		'Arthei',
+		'Boreth',
+		'Lersatio',
+		'Marziel',
+	])],
+
+	['pharaoh-boss', new Set([
+		// Bosses from The Ancient Tombs Quest.
+		'Ashmunrah',
+		'Dipthrah',
+		'Mahrdis',
+		'Morguthis',
+		'Omruc',
+		'Rahemos',
+		'Thalas',
+		'Vashresamun',
+		// Other pharaoh bosses.
+		'Horestis',
+		'The Ravager',
+	])],
+
+	['secret-library-boss', new Set([
+		// Falcon Bastion bosses encountered during the quest.
+		'Grand Canon Dominus',
+		'Grand Chaplain Gaunder',
+		'Grand Commander Soeren',
+		'Grand Master Oberon',
+		'Preceptor Lazare',
+
+		// True Asura bosses encountered during the quest.
+		'The Blazing Rose',
+		'The Diamond Blossom',
+		'The Lily of Night',
+
+		// Deathling boss encountered during the quest.
+		'Brokul',
+
+		// Secret Library mini-bosses.
+		'Ghulosh',
+		'Gorzindel',
+		'Lokathmor',
+		'Mazzinor',
+
+		// Secret Library final boss.
+		'The Scourge of Oblivion',
+	])],
+
+	['grave-danger-boss', new Set([
+		// Cobra Bastion bosses encountered during the quest.
+		'Custodian',
+		'Gaffir',
+		'Guard Captain Quaid',
+		'Scarlett Etzel',
+
+		// “Graves” mini-bosses.
+		'Count Vlarkorth',
+		'Duke Krule',
+		'Earl Osam',
+		'Lord Azaram',
+		'Sir Baeloc',
+		'Sir Nictros',
+
+		// Final boss.
+		'King Zelos',
+	])],
+
+	['cults-of-tibia-boss', new Set([
+		'Essence of Malice', // Carlin.
+		'Ravenous Hunger', // Ab'dendriel.
+		'The False God', // Mintwallin.
+		'The Sandking', // Darashia.
+		'The Souldespoiler', // Outlaw Camp.
+		'The Unarmored Voidborn', // Edron.
+
+		// Final boss.
+		'The Source of Corruption',
+	])],
+
+	['feaster-of-souls-boss', new Set([
+		// Individual Port Hope flimsy mini-bosses.
+		'Unaz the Mean',
+		'Irgix the Flimsy',
+		'Vok the Freakish',
+
+		// Venore flimsy boss.
+		'Brain Head',
+
+		// Edron flimsy boss.
+		'Thaian',
+
+		// Vengoth mini-bosses.
+		'The Dread Maiden',
+		'The Fear Feaster',
+		'The Unwelcome',
+
+		// Final boss.
+		'The Pale Worm',
+	])],
+
+	['asura-boss', new Set([
+		// Within the Tides quest bosses.
+		'The Flaming Orchid',
+		'The Moonlight Aster',
+		'The Winter Bloom',
+		'Kusuma',
+
+		// True asura bosses from the Secret Library quest.
+		'The Blazing Rose',
+		'The Diamond Blossom',
+		'The Lily of Night',
+	])],
 
 ]);
 
