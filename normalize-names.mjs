@@ -350,6 +350,7 @@ const normalizedToPrettyNames = new Map([
 	['The Dark Dancer', 'The Dark Dancer'],
 	['The Destruction', 'The Destruction'],
 	['The Diamond Blossom', 'The Diamond Blossom'],
+	['The Distorted Astral Source', 'The Distorted Astral Source'],
 	['The Dread Maiden', 'The Dread Maiden'],
 	['The Dreadorian', 'The Dreadorian'],
 	['The Duke Of The Depths', 'The Duke of the Depths'],
