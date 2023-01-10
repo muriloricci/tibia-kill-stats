@@ -1,5 +1,4 @@
 import fs from 'node:fs/promises';
-import jsesc from 'jsesc';
 
 const readKillStats = async () => {
 	const filePath = './data/_global-total/kills.json';
@@ -47,9 +46,7 @@ export const createKillsPerCategoryMap = (creaturesPerCategory) => {
 };
 
 export const writeMap = async (map, slug) => {
-	const json = jsesc(Object.fromEntries(map), {
-		json: true,
-		compact: false,
-	});
+	const object = Object.fromEntries(map);
+	const json = JSON.stringify(object, null, '\t');
 	await fs.writeFile(`./data/_global-total/${slug}-kills.json`, `${json}\n`);
 };

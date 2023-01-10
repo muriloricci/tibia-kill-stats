@@ -1,6 +1,5 @@
 import fs from 'node:fs/promises';
 import glob from 'glob';
-import jsesc from 'jsesc';
 import { toPrettyName } from './normalize-names.mjs';
 
 // race => totalKilled
@@ -28,10 +27,7 @@ for (const fileName of fileNames) {
 
 {
 	const KILL_STATS_NAMES = [...map.keys()].sort();
-	const json = jsesc(KILL_STATS_NAMES, {
-		json: true,
-		compact: false,
-	});
+	const json = JSON.stringify(KILL_STATS_NAMES, null, '\t');
 	await fs.writeFile('./data/_global-total/names.json', `${json}\n`);
 }
 
@@ -49,9 +45,7 @@ const sorted = entries
 });
 
 {
-	const json = jsesc(Object.fromEntries(sorted), {
-		json: true,
-		compact: false,
-	});
+	const object = Object.fromEntries(sorted);
+	const json = JSON.stringify(object, null, '\t');
 	await fs.writeFile('./data/_global-total/kills.json', `${json}\n`);
 }
