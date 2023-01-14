@@ -1463,7 +1463,7 @@ export const toPrettyName = (killStatsName) => {
 };
 
 export const toKillStatsName = (prettyName) => {
-	const killStatsName = normalizedToPrettyNames.get(prettyName);
+	const killStatsName = prettyToNormalizedNames.get(prettyName);
 	return killStatsName;
 };
 
