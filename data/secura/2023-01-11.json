@@ -990,41 +990,6 @@
 				"last_week_killed": 3
 			},
 			{
-				"race": "Iks ahpututus",
-				"last_day_players_killed": 0,
-				"last_day_killed": 41,
-				"last_week_players_killed": 0,
-				"last_week_killed": 561
-			},
-			{
-				"race": "Iks aucars",
-				"last_day_players_killed": 0,
-				"last_day_killed": 447,
-				"last_week_players_killed": 0,
-				"last_week_killed": 10634
-			},
-			{
-				"race": "Iks chukas",
-				"last_day_players_killed": 0,
-				"last_day_killed": 376,
-				"last_week_players_killed": 0,
-				"last_week_killed": 8821
-			},
-			{
-				"race": "Iks churrascans",
-				"last_day_players_killed": 0,
-				"last_day_killed": 209,
-				"last_week_players_killed": 0,
-				"last_week_killed": 2879
-			},
-			{
-				"race": "Iks pututus",
-				"last_day_players_killed": 0,
-				"last_day_killed": 316,
-				"last_week_players_killed": 0,
-				"last_week_killed": 7567
-			},
-			{
 				"race": "Incineron",
 				"last_day_players_killed": 0,
 				"last_day_killed": 2,
@@ -5276,37 +5241,37 @@
 			{
 				"race": "iks ahpututus",
 				"last_day_players_killed": 0,
-				"last_day_killed": 278,
+				"last_day_killed": 319,
 				"last_week_players_killed": 0,
-				"last_week_killed": 278
+				"last_week_killed": 839
 			},
 			{
 				"race": "iks aucars",
 				"last_day_players_killed": 0,
-				"last_day_killed": 3511,
+				"last_day_killed": 3958,
 				"last_week_players_killed": 0,
-				"last_week_killed": 3511
+				"last_week_killed": 14145
 			},
 			{
 				"race": "iks chukas",
 				"last_day_players_killed": 0,
-				"last_day_killed": 2861,
+				"last_day_killed": 3237,
 				"last_week_players_killed": 0,
-				"last_week_killed": 2861
+				"last_week_killed": 11682
 			},
 			{
 				"race": "iks churrascans",
 				"last_day_players_killed": 0,
-				"last_day_killed": 1412,
+				"last_day_killed": 1621,
 				"last_week_players_killed": 0,
-				"last_week_killed": 1412
+				"last_week_killed": 4291
 			},
 			{
 				"race": "iks pututus",
 				"last_day_players_killed": 0,
-				"last_day_killed": 2544,
+				"last_day_killed": 2860,
 				"last_week_players_killed": 0,
-				"last_week_killed": 2544
+				"last_week_killed": 10111
 			},
 			{
 				"race": "infected weepers",
