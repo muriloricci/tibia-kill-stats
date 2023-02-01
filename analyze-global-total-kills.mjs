@@ -18,11 +18,33 @@ const handleFile = async (fileName) => {
 	}
 };
 
+const handleLatest = async (fileName) => {
+	const latestMap = new Map();
+	const json = await fs.readFile(fileName, 'utf8');
+	const stats = JSON.parse(json).killstatistics;
+	const entries = stats.entries;
+	const world = stats.world;
+	for (const {race, last_day_killed} of entries) {
+		const prettyName = toPrettyName(race);
+		latestMap.set(prettyName, last_day_killed);
+	}
+	const newData = Object.fromEntries(latestMap);
+	const newJson = JSON.stringify(newData, null, '\t');
+	await fs.writeFile(`./data/_yesterday/${world}.json`, `${newJson}\n`);
+};
+
 const fileNames = glob.sync('./data/*/*.json', {
-	ignore: './data/_global-total/*.json',
+	ignore: [
+		'./data/_global-total/*.json',
+		'./data/_yesterday/*.json',
+	],
 });
 for (const fileName of fileNames) {
-	await handleFile(fileName);
+	if (fileName.endsWith('latest.json')) {
+		await handleLatest(fileName);
+	} else {
+		await handleFile(fileName);
+	}
 }
 
 {
