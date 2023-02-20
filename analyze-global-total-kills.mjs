@@ -25,6 +25,7 @@ const handleLatest = async (fileName) => {
 	const entries = stats.entries;
 	const world = stats.world;
 	for (const {race, last_day_killed} of entries) {
+		if (last_day_killed <= 0) continue;
 		const prettyName = toPrettyName(race);
 		latestMap.set(prettyName, last_day_killed);
 	}
