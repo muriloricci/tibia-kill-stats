@@ -558,6 +558,7 @@ const normalizedToPrettyNames = new Map([
 	['burning gladiators', 'burning gladiator'],
 	['burster spectres', 'burster spectre'],
 	['butterflies', 'butterfly'],
+	['cake golems', 'cake golem'],
 	['calamaries', 'calamary'],
 	['canopic jars', 'canopic jar'],
 	['capricious phantoms', 'capricious phantom'],
