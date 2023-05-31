@@ -6,6 +6,9 @@ on:
     # Schedule the cron job for 04:30 CE(S)T, i.e. 02:30 UTC.
     # https://www.tibiaqa.com/26439/when-and-how-often-the-kill-statistics-are-updated?show=26440#a26440
     - cron: '30 02 * * *'
+    # Schedule additional jobs in case something went wrong.
+    - cron: '30 03 * * *'
+    - cron: '30 04 * * *'
   workflow_dispatch:
 
 jobs:
