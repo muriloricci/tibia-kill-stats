@@ -21,6 +21,21 @@ const getKillStatsForWorld = async (worldName) => {
 	return data;
 };
 
+const doesFileExist = async (path) => {
+	try {
+		await fs.stat(path);
+		return true;
+	} catch {
+		return false;
+	}
+};
+
+const date = new Date().toISOString().slice(0, 'yyyy-mm-dd'.length);
+if (await doesFileExist(`./data/antica/${date}.json`)) {
+	console.log(`Stats for ${date} are already checked in. Nothing to do.`);
+	process.exit();
+}
+
 const worldNames = await getWorlds();
 // Kick off all requests in parallel.
 const killStatsPerWorld = worldNames.map((worldName) => getKillStatsForWorld(worldName));
@@ -33,7 +48,6 @@ for await (const stats of killStatsPerWorld) {
 		recursive: true,
 	});
 
-	const date = new Date().toISOString().slice(0, 'yyyy-mm-dd'.length);
 	const json = JSON.stringify(stats, null, '\t') + '\n';
 	await fs.writeFile(`${worldPath}/${date}.json`, json);
 }
