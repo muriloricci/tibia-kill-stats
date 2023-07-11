@@ -12,6 +12,7 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Anmothra',
 		'Arachir the Ancient One',
 		'Arthom the Hunter',
+		'Bakragore',
 		'Bane Lord',
 		'Barbaria',
 		'Battlemaster Zunzu',
@@ -126,6 +127,7 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Bloodback',
 		'Brain Head',
 		'Brokul',
+		'Chagorz',
 		'Count Vlarkorth',
 		'Darkfang',
 		'Deathstrike',
@@ -146,6 +148,7 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Goshnar\'s Malice',
 		'Goshnar\'s Spite',
 		'Grand Master Oberon',
+		'Ichgahal',
 		'Irgix the Flimsy',
 		'Kalyassa',
 		'Katex Blood Tongue',
@@ -163,6 +166,7 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Mazzinor',
 		'Megasylvan Yselda',
 		'Melting Frozen Horror',
+		'Murcion',
 		'Neferi the Spy',
 		'Outburst',
 		'Owin',
@@ -213,6 +217,7 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Unaz the Mean',
 		'Urmahlullu the Weakened',
 		'Utua Stone Sting',
+		'Vemiath',
 		'Vok the Freakish',
 		'Yirkas Blue Scales',
 		'Zamulosh',
@@ -517,6 +522,15 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Munster',
 		'Rottie the Rotworm',
 		'Teleskor',
+	])],
+
+	['rotten-blood-boss', new Set([
+		'Chagorz',
+		'Ichgahal',
+		'Murcion',
+		'Vemiath',
+		// Final boss.
+		'Bakragore',
 	])],
 
 	/* Other custom categories. */
