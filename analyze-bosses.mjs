@@ -650,6 +650,17 @@ const BOSSES_PER_CATEGORY = new Map([
 		'The Lily of Night',
 	])],
 
+	// Bosses encountered during Full Moon.
+	['full-moon-boss', new Set([
+		// Grimvale.
+		'Owin',
+		// Oskayaat.
+		'Ayana the Crimson Curse',
+		'Tamru the Black',
+		// “Final” boss.
+		'Feroxa',
+	])],
+
 ]);
 
 // All bosses.
