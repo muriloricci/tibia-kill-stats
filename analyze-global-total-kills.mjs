@@ -38,7 +38,7 @@ const fileNames = glob.sync('./data/*/*.json', {
 	ignore: [
 		'./data/_global-total/*.json',
 		'./data/_yesterday/*.json',
-		// Former worlds:
+		// Former worlds as of 2023-08-29:
 		'./data/adra/latest.json',
 		'./data/alumbra/latest.json',
 		'./data/ardera/latest.json',
