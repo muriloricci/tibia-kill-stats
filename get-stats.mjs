@@ -15,10 +15,14 @@ const getWorlds = async () => {
 };
 
 const getKillStatsForWorld = async (worldName) => {
-	const response = await fetch(`https://api.tibiadata.com/v3/killstatistics/${slugify(worldName)}`);
-	const data = await response.json();
-	console.log(`Processing kill stats for world ${worldName}…`);
-	return data;
+	try {
+		const response = await fetch(`https://api.tibiadata.com/v3/killstatistics/${slugify(worldName)}`);
+		const data = await response.json();
+		console.log(`Processing kill stats for world ${worldName}…`);
+		return data;
+	} catch (error) {
+		return getKillStatsForWorld(worldName);
+	}
 };
 
 const doesFileExist = async (path) => {
