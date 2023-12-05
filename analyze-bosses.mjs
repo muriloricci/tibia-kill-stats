@@ -167,6 +167,7 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Mazzinor',
 		'Megasylvan Yselda',
 		'Melting Frozen Horror',
+		'Mitmah Vanguard',
 		'Murcion',
 		'Neferi the Spy',
 		'Outburst',
@@ -230,6 +231,7 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Annihilon',
 		'Arthei',
 		'Ashmunrah',
+		'Atab',
 		'Black Knight',
 		'Boogey',
 		'Boreth',
@@ -659,6 +661,22 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Tamru the Black',
 		// “Final” boss.
 		'Feroxa',
+	])],
+
+	['iksupan-boss', new Set([
+		'Ahau',
+		'Atab',
+		'Mitmah Vanguard',
+	])],
+
+	['nimmersatts-breeding-ground-boss', new Set([
+		'Maliz',
+		'Vengar',
+		'Bruton',
+		'Greedok',
+		'Vilear',
+		'Crultor',
+		'Despor',
 	])],
 
 ]);
