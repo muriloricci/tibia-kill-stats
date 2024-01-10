@@ -670,13 +670,16 @@ const BOSSES_PER_CATEGORY = new Map([
 	])],
 
 	['nimmersatts-breeding-ground-boss', new Set([
-		'Maliz',
-		'Vengar',
+		// Individual mini-bosses during the fight.
 		'Bruton',
-		'Greedok',
-		'Vilear',
 		'Crultor',
 		'Despor',
+		'Greedok',
+		'Maliz',
+		'Vengar',
+		'Vilear',
+		// “Final” boss, tracking completion of the boss room.
+		'Dragon Pack',
 	])],
 
 ]);

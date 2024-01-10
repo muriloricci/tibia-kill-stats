@@ -100,6 +100,7 @@ const normalizedToPrettyNames = new Map([
 	['Dorokoll The Mystic', 'Dorokoll the Mystic'],
 	['Dracola', 'Dracola'],
 	['Dragon Essences', 'Dragon Essence'],
+	['Dragon Pack', 'Dragon Pack'],
 	['Dragon Wardens', 'Dragon Warden'],
 	['Dragonking Zyrtarch', 'Dragonking Zyrtarch'],
 	['Drasilla', 'Drasilla'],
