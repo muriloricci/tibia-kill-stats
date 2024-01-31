@@ -3,11 +3,8 @@ import glob from 'glob';
 
 // legacyKillStatsName => newKillStatsName
 const map = new Map([
-	['Iks ahpututus', 'iks ahpututus'],
-	['Iks aucars', 'iks aucars'],
-	['Iks chukas', 'iks chukas'],
-	['Iks churrascans', 'iks churrascans'],
-	['Iks pututus', 'iks pututus'],
+	['boar mans', 'boar men'],
+	['crape mans', 'crape men'],
 ]);
 
 const handleFile = async (fileName) => {
@@ -59,7 +56,11 @@ const handleFile = async (fileName) => {
 };
 
 const fileNames = glob.sync('./data/*/*.json', {
-	ignore: './data/_global-total/*.json',
+	ignore: [
+		'./data/*/latest.json',
+		'./data/_global-total/*.json',
+		'./data/_yesterday/*.json',
+	],
 });
 for (const fileName of fileNames) {
 	await handleFile(fileName);
