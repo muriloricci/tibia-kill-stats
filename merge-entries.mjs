@@ -3,8 +3,8 @@ import glob from 'glob';
 
 // legacyKillStatsName => newKillStatsName
 const map = new Map([
-	['boar mans', 'boar men'],
-	['crape mans', 'crape men'],
+	['Magma Bubble', 'magma bubble'],
+	['Mooh\'Tah Masters', 'Mooh\'Tah Master'],
 ]);
 
 const handleFile = async (fileName) => {
