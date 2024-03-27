@@ -158,6 +158,7 @@ const normalizedToPrettyNames = new Map([
 	['Glooth Fairy', 'Glooth Fairy'],
 	['Gnomevil', 'Gnomevil'],
 	['Gnorre Chyllson', 'Gnorre Chyllson'],
+	['Gorga', 'Gorga'],
 	['Golgordan', 'Golgordan'],
 	['Gorgo', 'Gorgo'],
 	['Gorzindel', 'Gorzindel'],

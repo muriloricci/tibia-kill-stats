@@ -255,6 +255,7 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Glitterscale',
 		'Glooth Fairy',
 		'Golgordan',
+		'Gorga',
 		'Grand Canon Dominus',
 		'Grand Chaplain Gaunder',
 		'Grand Commander Soeren',
