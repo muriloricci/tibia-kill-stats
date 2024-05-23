@@ -458,6 +458,7 @@ const BOSSES_PER_CATEGORY = new Map([
 
 	['ferumbras-ascension-boss', new Set([
 		'Mazoran',
+		'The Lord of the Lice',
 		'Plagirath',
 		'Ragiaz',
 		'Razzagorn',
