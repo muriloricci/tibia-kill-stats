@@ -132,6 +132,7 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Count Vlarkorth',
 		'Darkfang',
 		'Deathstrike',
+		'Dragon Pack',
 		'Drume',
 		'Duke Krule',
 		'Earl Osam',
