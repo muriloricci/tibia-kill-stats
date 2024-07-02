@@ -443,6 +443,11 @@ const BOSSES_PER_CATEGORY = new Map([
 		'Plagueroot',
 	])],
 
+	['candia-boss', new Set([
+		'Sugar Daddy',
+		'Sugar Mommy',
+	])],
+
 	['oramond-voted-boss', new Set([
 		'Bullwark',
 		'Glooth Fairy',
