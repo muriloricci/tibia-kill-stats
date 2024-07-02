@@ -330,7 +330,7 @@ const normalizedToPrettyNames = new Map([
 	['Slim', 'Slim'],
 	['Smuggler Baron Silvertoe', 'Smuggler Baron Silvertoe'],
 	['Snake Thing', 'Snake Thing'],
-	['Solid Frozen Horrors', 'Solid Frozen Horror'],
+	['Solid Frozen Horror', 'Solid Frozen Horror'],
 	['Soul Cages', 'Soul Cages'],
 	['Soul of Dragonking Zyrtarch', 'Soul of Dragonking Zyrtarch'],
 	['spawns of the welter', 'Spawn of the Welter'],
